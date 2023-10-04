@@ -10,7 +10,7 @@
 ## Continuous Version
 
 ### Probability ori. Fidelity results of Ba2Motifs dataset(ACC results can be found in ./pictures), the x-axis means adding non-explanation edges to GT, y-axis means remove edges from GT.
-<p align="center">
+<p align="left">
 <img src="./pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png" width = "300" alt="" align=center />
 <br><br>
 <b>Figure 1.</b> Original Fidelity+.
@@ -22,7 +22,7 @@
 <b>Figure 1.</b> Original Fidelity+.
 </p>
 
-<p align="center">
+<p align="right">
 <img src="./pictures/GNN_ba2_results_ori_fid_1fid_Delta prob.png" width = "300" alt="" align=center />
 <br><br>
 <b>Figure 1.</b> Original Fidelity_$\Delta$.
