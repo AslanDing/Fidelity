@@ -114,63 +114,7 @@ if __name__=="__main__":
             if len(name_path_list)>1:
                 np.save(name_path_list[0].replace('.npy','_dict'),data_dict)
 
-
     exit(0)
 
-    for index in range(0,2):
-        #for dataset_idx in range(0,1):
-
-            explainer_name = explainer_lists[index]
-            #dataset_name = dataset_lists[dataset_idx]
-            name_path_list = glob.glob('./data/%s/gcn/*.npy'%explainer_name)
-            for name_path in name_path_list:
-                path = name_path
-                #path = r'./data/%s/gcn/%s_weight.npy'%(explainer_name,dataset_name)
-                weights = np.load(path,allow_pickle=True)
-
-                if 'syn' in path:
-                    weight_dict = process_gnn_weights_nodes(weights)
-                else:
-                    weight_dict = process_gnn_weights_graphs(weights)
-
-                np.save(path.replace('.npy','_dict'),weight_dict)
-
-    exit(0)
-
-
-
-    dir_path = ['../GraphXAI-main/examples','../subgraphX-dig/examples/xgraph']
-    for index in range(3,4):
-        for dataset_idx in range(2,6):
-
-            explainer_name = explainer_lists[index]
-            dataset_name = dataset_lists[dataset_idx]
-            dir = dir_path[index-2]
-
-            name_list = glob.glob(dir+'/'+f'*{dataset_name}*')
-            # lists = os.listdir(dir)
-            weight_dict = {}
-            for path in name_list:
-                weight = np.load(path, allow_pickle=True)
-                name = path.split('/')[-1]
-                name_split = name.split('_')
-                if len(name_split) < 3:
-                    continue
-                sp = int(name_split[-2])
-                weight_dict[sp] = weight
-
-            # weights = np.load(path,allow_pickle=True)
-
-            if 'syn' in dataset_name:
-                process_explainer_weights_nodes(weight_dict)
-            else:
-                weight_dict = process_explainer_weights_graphs(weight_dict)
-            save_name = dir + '/../%s_weight_dict'%dataset_name
-            np.save(save_name,weight_dict)
-
-"""
-
-
-"""
 
 

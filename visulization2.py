@@ -137,13 +137,11 @@ def visualization_fid_new_k(data_dict,save_path=None,k_p = 1, k_m = 1 ):
 
     dict_ratio = {0:0,1:1,
                   2:2,3:3,
-                  4:4,
-                  5:5,}
+                  4:4}
 
     x_ticks = [0, 1,
                2,  3,
-               4,
-               5]
+               4]
     for value_count in dict_name.keys():
         name = dict_name[value_count]
         length = int(math.sqrt(len(data_dict.keys())))
@@ -283,13 +281,11 @@ def visualization_fid_ori_k(data_dict,save_path=None):
 
     dict_ratio = {0:0,1:1,
                   2:2,3:3,
-                  4:4,
-                  5:5,}
+                  4:4}
 
     x_ticks = [0, 1,
                2,  3,
-               4,
-               5]
+               4]
 
     for value_count in dict_name.keys():
         name = dict_name[value_count]
@@ -317,22 +313,6 @@ def visualization_fid_ori_k(data_dict,save_path=None):
         plt.close()
 
 
-def testvalue():
-
-    x_ticks = ['0', '1',
-               '2',  '3']
-    matrix = np.zeros([4, 4])
-    for i in range(4):
-        for j in range(4):
-            matrix[i,j] = i+j*0.1
-
-    data = DataFrame(matrix)
-    plt.figure(dpi=120)
-    sns.heatmap(data=data, square=True, xticklabels=x_ticks, yticklabels=x_ticks,fmt='.2f',annot=True)
-    plt.tick_params(labeltop=True)
-    plt.tick_params(labelbottom=False)
-    plt.show()
-
 
 if __name__ == "__main__":
     # testvalue()
@@ -355,85 +335,5 @@ if __name__ == "__main__":
         data = np.load(path, allow_pickle=True).item()
         visualization_fid_ori_k(data, path.replace('.npy',''))
 
-
-
     exit(0)
-    # direct nodes
-    namelist = glob.glob(dir + '/directed_sample/*ori_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_ori(data, path.replace('.npy',''))
 
-    # undirect nodes
-    namelist = glob.glob(dir + '/undirect_sample/*ori_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_ori(data, path.replace('.npy',''))
-
-    # gin
-    dir = './redata/gin'
-    # graph
-    namelist = glob.glob(dir+'/*ori_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_ori(data, path.replace('.npy',''))
-
-    # direct nodes
-    namelist = glob.glob(dir + '/directed_sample/*ori_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_ori(data, path.replace('.npy',''))
-
-    # undirect nodes
-    namelist = glob.glob(dir + '/undirect_sample/*ori_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_ori(data, path.replace('.npy',''))
-
-    # new fid
-    dir = './redata/gcn'
-    # graph
-    namelist = glob.glob(dir + '/*new_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_new(data, path.replace('.npy', ''))
-
-    # direct nodes
-    namelist = glob.glob(dir + '/directed_sample/*new_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_new(data, path.replace('.npy', ''))
-
-    # undirect nodes
-    namelist = glob.glob(dir + '/undirect_sample/*new_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_new(data, path.replace('.npy', ''))
-
-    # gin
-    dir = './redata/gin'
-    # graph
-    namelist = glob.glob(dir + '/*new_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_new(data, path.replace('.npy', ''))
-
-    # direct nodes
-    namelist = glob.glob(dir + '/directed_sample/*new_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_new(data, path.replace('.npy', ''))
-
-    # undirect nodes
-    namelist = glob.glob(dir + '/undirect_sample/*new_fid*.npy')
-    for path in namelist:
-        data = np.load(path, allow_pickle=True).item()
-        visualization_fid_new(data, path.replace('.npy', ''))
-
-    exit(0)
-    path = r'redata/syn3_results_ori_fid_1.npy'
-    data = np.load(path,allow_pickle=True).item()
-    visualization_fid_ori(data,'syn3')
-    path = r'redata/syn3_results_new_fid_1_1_seeds_1.npy'
-    data = np.load(path,allow_pickle=True).item()
-    visualization_fid_new(data,'syn3')
