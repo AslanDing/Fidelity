@@ -3,7 +3,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '4'
 import torch
 print(torch.cuda.is_available())
 from ExplanationEvaluation.configs.selector import Selector
-from ExplanationEvaluation.tasks.replication_table import experiments_editdistance_ori_fids,replication_sp
+from ExplanationEvaluation.tasks.replication_table import experiments_editdistance_ori_fids
 
 
 _dataset = 'mutag'      # One of: bashapes, bacommunity, treecycles, treegrids, ba2motifs, mutag
