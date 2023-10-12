@@ -110,14 +110,6 @@
 
 
 
-## observation（continuous version observation is shown in the paper, here we focus on discrete version）
-- When add non-explanation edges to GT,our fidelity+ decreases while our fidelity-  stay at a certain level.(first row)
--  When remove edges from GT, our fidelity+ stay at a certain level  while our fidelity-  increase.(first coloumn)
--  Under same sparsity, our fidelity have a strong correlation with AUC(diagonal line).
--  Fidelity_$\Delta$ has the maxmium at GT.
-- I personally recommend use discrete version fidelity_k with k_plus=1, k_minus=1. It has a linear time complexity when k_plus = k_minus=1. It is consistent with AUC score under same sparsity. The ACC Fidelity is consistent with Prob. Fidelity.
-
-
 ### Acknowledge. This project is base on \[RE\]-PGExplainer [link](https://github.com/LarsHoldijk/RE-ParameterizedExplainerForGraphNeuralNetworks/blob/main/README.md)
 
 ### If this work is helpful for you, please cite our paper.
