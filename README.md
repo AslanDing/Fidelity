@@ -1,7 +1,7 @@
 # This Project is for our work [TOWARDS ROBUST FIDELITY FOR EVALUATING EXPLAINABILITY OF GRAPH NEURAL NETWORKS](https://arxiv.org/pdf/2310.01820.pdf)
 
 <!-- #### In this project, we present our fidelity, a new metric for XGNN evaluation. This project would contain two version of our work, continuous version and discrete version. -->
-#### If you just want to use our fidelity for evaluation, please use tools folder. Now this folder is under construction. It would be available soon.
+#### If you just want to use our fidelity for evaluation, please use tools folder. Now this folder is under construction. It is an early version, the final version will be coming soon.
 
 ## for results reproduce
 - generate samples, please run generate_edit_distance.py
