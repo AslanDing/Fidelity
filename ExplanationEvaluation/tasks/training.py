@@ -4,7 +4,7 @@ import random
 import numpy as np
 from torch_geometric.data import Data, DataLoader
 
-from ExplanationEvaluation.datasets.dataset_loaders import load_dataset,load_dataset_contrastive
+from ExplanationEvaluation.datasets.dataset_loaders import load_dataset
 from ExplanationEvaluation.models.model_selector import model_selector
 from ExplanationEvaluation.datasets.utils import preprocess_features, preprocess_adj, adj_to_edge_index, load_real_dataset
 from ExplanationEvaluation.datasets.ground_truth_loaders import load_dataset_ground_truth

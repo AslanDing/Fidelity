@@ -9,7 +9,7 @@ from torch_geometric.utils import k_hop_subgraph
 from itertools import combinations
 
 
-def cal_fid(type, model_to_explain, nodes, edges, explain_edges, weight, label, index, pred_label=False):
+def cal_ori_fid(type, model_to_explain, nodes, edges, explain_edges, weight, label, index, pred_label=False):
     """
        type: str, graph or nodes
        model_to_explain: torch model
@@ -31,13 +31,13 @@ def cal_fid(type, model_to_explain, nodes, edges, explain_edges, weight, label, 
     graph = edges
     features = nodes
     gt_graph = explain_edges
-    edge_weight = weight
+    edge_weight = weight.cpu().numpy()
     if type == 'node':
         matrix_0_graph = graph[0].cpu().numpy().tolist()
         matrix_1_graph = graph[1].cpu().numpy().tolist()
 
-        matrix_0 = gt_graph[0]  # .cpu().numpy()
-        matrix_1 = gt_graph[1]  # .cpu().numpy()
+        matrix_0 = gt_graph[0].cpu().numpy()
+        matrix_1 = gt_graph[1].cpu().numpy()
         gt_graph_matrix = coo_matrix(
             (edge_weight,
              (matrix_0, matrix_1)), shape=(features.shape[0], features.shape[0])).tocsr()
@@ -48,8 +48,8 @@ def cal_fid(type, model_to_explain, nodes, edges, explain_edges, weight, label, 
         matrix_0_graph = graph[0].cpu().numpy().tolist()
         matrix_1_graph = graph[1].cpu().numpy().tolist()
 
-        matrix_0 = gt_graph[0]  # .cpu().numpy()
-        matrix_1 = gt_graph[1]  # .cpu().numpy()
+        matrix_0 = gt_graph[0].cpu().numpy()
+        matrix_1 = gt_graph[1].cpu().numpy()
         gt_graph_matrix = coo_matrix(
             (edge_weight,
              (matrix_0, matrix_1)), shape=(features.shape[0], features.shape[0])).tocsr()
@@ -75,7 +75,9 @@ def cal_fid(type, model_to_explain, nodes, edges, explain_edges, weight, label, 
             # add mask
 
     if pred_label:
-        label = original_label
+        label = int(original_label)
+    else:
+        label = int(label)
 
     if type == 'node':
         with torch.no_grad():
@@ -150,13 +152,13 @@ def edit_distance_gt_ratio_plus(type, model_to_explain, nodes, edges, explain_ed
     graph = edges
     features = nodes
     gt_graph = explain_edges
-    edge_weight = weight
+    edge_weight = weight.cpu().numpy()
     # reverse = False ,fid+ , reverse= True fid-
     if type == 'node':
         # matrix_0_graph = graph[0].cpu().numpy().tolist()
         # matrix_1_graph = graph[1].cpu().numpy().tolist()
-        matrix_0 = gt_graph[0]  # .cpu().numpy()
-        matrix_1 = gt_graph[1]  # .cpu().numpy()
+        matrix_0 = gt_graph[0].cpu().numpy()
+        matrix_1 = gt_graph[1].cpu().numpy()
         gt_graph_matrix = coo_matrix(
             (edge_weight,  # gt_graph[1],
              (matrix_0, matrix_1)), shape=(features.shape[0], features.shape[0])).tocsr()
@@ -183,8 +185,8 @@ def edit_distance_gt_ratio_plus(type, model_to_explain, nodes, edges, explain_ed
         matrix_0_graph = graph[0].cpu().numpy().tolist()
         matrix_1_graph = graph[1].cpu().numpy().tolist()
 
-        matrix_0 = gt_graph[0]  # .cpu().numpy()
-        matrix_1 = gt_graph[1]  # .cpu().numpy()
+        matrix_0 = gt_graph[0].cpu().numpy()
+        matrix_1 = gt_graph[1].cpu().numpy()
         gt_graph_matrix = coo_matrix(
             (edge_weight,  # weight
              (matrix_0, matrix_1)), shape=(features.shape[0], features.shape[0])).tocsr()
@@ -240,7 +242,9 @@ def edit_distance_gt_ratio_plus(type, model_to_explain, nodes, edges, explain_ed
             # add mask
 
     if pred_label:
-        label = original_label
+        label = int(original_label)
+    else:
+        label = int(label)
 
     def cal_fid_embedding_plus():
         # global explain_indexs_combin
@@ -263,7 +267,7 @@ def edit_distance_gt_ratio_plus(type, model_to_explain, nodes, edges, explain_ed
         for i in range(max_length):
             if type == 'node':
                 with torch.no_grad():
-                    mask_pred_plus, embedding_expl_src_plus = model_to_explain(feats, graph,
+                    mask_pred_plus, embedding_expl_src_plus = model_to_explain(feats, gt_graph,
                                                                                     edge_weights=(
                                                                                                 1 - list_explain[i].to(
                                                                                             feats.device)),
@@ -281,7 +285,7 @@ def edit_distance_gt_ratio_plus(type, model_to_explain, nodes, edges, explain_ed
             else:
                 with torch.no_grad():
 
-                    mask_pred_plus, embedding_expl_src_plus = model_to_explain(feats, graph,
+                    mask_pred_plus, embedding_expl_src_plus = model_to_explain(feats, gt_graph,
                                                                                     edge_weights=(
                                                                                                 1 - list_explain[i].to(
                                                                                             feats.device)),
@@ -335,14 +339,14 @@ def edit_distance_gt_ratio_minus(type, model_to_explain, nodes, edges, explain_e
     graph = edges
     features = nodes
     gt_graph = explain_edges
-    edge_weight = weight
+    edge_weight = weight.cpu().numpy()
 
     # reverse = False ,fid+ , reverse= True fid-
     if type == 'node':
         # matrix_0_graph = graph[0].cpu().numpy().tolist()
         # matrix_1_graph = graph[1].cpu().numpy().tolist()
-        matrix_0 = gt_graph[0]  # .cpu().numpy()
-        matrix_1 = gt_graph[1]  # .cpu().numpy()
+        matrix_0 = gt_graph[0].cpu().numpy()
+        matrix_1 = gt_graph[1].cpu().numpy()
         gt_graph_matrix = coo_matrix(
             (edge_weight,  # gt_graph[1],
              (matrix_0, matrix_1)), shape=(features.shape[0], features.shape[0])).tocsr()
@@ -371,8 +375,8 @@ def edit_distance_gt_ratio_minus(type, model_to_explain, nodes, edges, explain_e
         matrix_0_graph = graph[0].cpu().numpy().tolist()
         matrix_1_graph = graph[1].cpu().numpy().tolist()
 
-        matrix_0 = gt_graph[0]  # .cpu().numpy()
-        matrix_1 = gt_graph[1]  # .cpu().numpy()
+        matrix_0 = gt_graph[0].cpu().numpy()
+        matrix_1 = gt_graph[1].cpu().numpy()
         gt_graph_matrix = coo_matrix(
             (edge_weight,  # gt_graph[1][index],
              (matrix_0, matrix_1)), shape=(features.shape[0], features.shape[0])).tocsr()
@@ -431,9 +435,10 @@ def edit_distance_gt_ratio_minus(type, model_to_explain, nodes, edges, explain_e
             original_label = original_pred.argmax(dim=-1).detach()
             # add mask
 
-
     if pred_label:
-        label = original_label
+        label = int(original_label)
+    else:
+        label = int(label)
 
     def cal_fid_embedding_minus():
         # global non_explain_indexs_combin
@@ -456,7 +461,7 @@ def edit_distance_gt_ratio_minus(type, model_to_explain, nodes, edges, explain_e
         for i in range(max_length):
             if type == 'node':
                 with torch.no_grad():
-                    mask_pred_minus, embedding_expl_src_minus = model_to_explain(feats, graph,
+                    mask_pred_minus, embedding_expl_src_minus = model_to_explain(feats, gt_graph,
                                                                                       edge_weights=1 - list_explain[
                                                                                           i].to(feats.device),
                                                                                       embedding=True)
@@ -472,7 +477,7 @@ def edit_distance_gt_ratio_minus(type, model_to_explain, nodes, edges, explain_e
             else:
                 with torch.no_grad():
 
-                    mask_pred_minus, embedding_expl_src_minus = model_to_explain(feats, graph,
+                    mask_pred_minus, embedding_expl_src_minus = model_to_explain(feats, gt_graph,
                                                                                       edge_weights=1 - list_explain[
                                                                                           i].to(feats.device),
                                                                                       embedding=True)
