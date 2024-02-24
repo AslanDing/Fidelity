@@ -51,7 +51,7 @@
 
 ### Acknowledge. This project is base on \[RE\]-PGExplainer [link](https://github.com/LarsHoldijk/RE-ParameterizedExplainerForGraphNeuralNetworks/blob/main/README.md)
 
-### If this work is helpful for you, please cite our paper.
+### If this work is helpful for you, please consider citing our paper.
 
 ```angular2html
 @misc{zheng2023robust,
@@ -62,5 +62,4 @@
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
-
 ```
