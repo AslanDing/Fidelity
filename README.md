@@ -13,15 +13,38 @@
 <!-- ## Continuous Version -->
 
 #### Probability ori. Fidelity results of Ba2Motifs dataset(ACC results can be found in ./pictures), the x-axis means adding non-explanation edges to GT, y-axis means remove edges from GT.
-![alt-text-1](pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png "title-1") ![alt-text-2](pictures/GNN_ba2_results_ori_fid_1fid_minus prob.png "title-2")![alt-text-2](pictures/GNN_ba2_results_ori_fid_1fid_Delta prob.png "title-2")
 
-<center class="ba2">
-<img src="./pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png"  width = "33%" alt="" align=center /> &nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./pictures/GNN_ba2_results_ori_fid_1fid_minus prob.png" width = "33%" alt="" align=center /> &nbsp; &nbsp; &nbsp; &nbsp;
-<img src="./pictures/GNN_ba2_results_ori_fid_1fid_Delta prob.png" width = "33%" alt="" align=center />
-<br><br>
-<b>Figure 1. </b> Original Fidelity+,Fidelity-,Fidelity_$\Delta$.
-</center>
+$\delta$
+
+[//]: # (![alt-text-1]&#40;pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png "title-1"&#41; ![alt-text-2]&#40;pictures/GNN_ba2_results_ori_fid_1fid_minus prob.png "title-2"&#41;![alt-text-2]&#40;pictures/GNN_ba2_results_ori_fid_1fid_Delta prob.png "title-2"&#41;)
+
+[//]: # (<center class="ba2">)
+
+[//]: # (<img src="./pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png"  width = "33%" alt="" align=center /> )
+
+[//]: # (<img src="./pictures/GNN_ba2_results_ori_fid_1fid_minus prob.png" width = "33%" alt="" align=center />)
+
+[//]: # (<img src="./pictures/GNN_ba2_results_ori_fid_1fid_Delta prob.png" width = "33%" alt="" align=center />)
+
+[//]: # (<br><br>)
+
+[//]: # (<b>Figure 1. </b> Original Fidelity+,Fidelity-,Fidelity_$\Delta$.)
+
+[//]: # (</center>)
+
+<table>
+  <tr>
+    <td>Original Fidelity+</td>
+     <td>Original Fidelity-</td>
+     <td>Fidelity_$\Delta$</td>
+  </tr>
+  <tr>
+    <td><img src="./pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png"  width = "100%" alt="" align=center /> </td>
+    <td><img src="./pictures/GNN_ba2_results_ori_fid_1fid_minus prob.png"  width = "100%" alt="" align=center /></td>
+    <td><img src="./pictures/GNN_ba2_results_ori_fid_1fid_Delta prob.png"  width = "100%" alt="" align=center /></td>
+  </tr>
+ </table>
+
 
 #### Probability our Fidelity results of Ba2Motifs dataset($ \Alpha_1 $ = 0.1,$\Alpha_2 = 0.9$)(ACC results can be found in ./pictures)
 <center class="ba2">
