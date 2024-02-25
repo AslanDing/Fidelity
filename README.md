@@ -12,7 +12,7 @@
 
 <!-- ## Continuous Version -->
 
-#### Probability ori. Fidelity results of Ba2Motifs dataset(ACC results can be found in ./pictures), the x-axis means adding non-explanation edges to GT, y-axis means remove edges from GT. The following three figures are Original $Fidelity+$,$Fidelity-$,Fidelity $\Delta$ , $Fidelity_\Delta$.
+#### Probability ori. Fidelity results of Ba2Motifs dataset(ACC results can be found in ./pictures), the x-axis means adding non-explanation edges to GT, y-axis means remove edges from GT. The following three figures are Original $Fidelity+$, $Fidelity-$, $Fidelity_\Delta$.
 
 [//]: # ($\Delta$)
 
@@ -51,31 +51,60 @@
 
 
 
-#### Probability our Fidelity results of Ba2Motifs dataset($ \Alpha_1 $ = 0.1,$\Alpha_2 = 0.9$)(ACC results can be found in ./pictures)
+#### Probability our Fidelity results of Ba2Motifs dataset($ \Alpha_1 $ = 0.1,$\Alpha_2 = 0.9$)(ACC results can be found in ./pictures). The following three figures are Ours $Fidelity+$, $Fidelity-$, $Fidelity_\Delta$.
 <center class="ba2">
-<img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_plus prob.png" width = "200" alt="" align=center />
-<img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_minus prob.png" width = "200" alt="" align=center />
-<img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_Delta prob.png" width = "200" alt="" align=center />
-<br><br>
-<b>Figure 2. </b> Ours Fidelity+,Fidelity-,Fidelity_$\Delta$.
+
+[//]: # (<img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_plus prob.png" width = "200" alt="" align=center />)
+
+[//]: # (<img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_minus prob.png" width = "200" alt="" align=center />)
+
+[//]: # (<img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_Delta prob.png" width = "200" alt="" align=center />)
+
+[//]: # (<br><br>)
+<table>
+  <tr>
+    <td><img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_plus prob.png"  width = "100%" alt="" align=center /> </td>
+    <td><img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_minus prob.png"  width = "100%" alt="" align=center /></td>
+    <td><img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_Delta prob.png"  width = "100%" alt="" align=center /></td>
+  </tr>
+ </table>
 </center>
 
-#### Probability ori. Fidelity results of TreeCycles dataset(ACC results can be found in ./pictures), the x-axis means adding non-explanation edges to GT, y-axis means remove edges from GT.
+#### Probability ori. Fidelity results of TreeCycles dataset(ACC results can be found in ./pictures), the x-axis means adding non-explanation edges to GT, y-axis means remove edges from GT. The following three figures are Original $Fidelity+$, $Fidelity-$, $Fidelity_\Delta$.
 <center class="ba2">
-<img src="./pictures/GNN_syn3_results_ori_fid_1fid_plus prob.png"  width = "200" alt="" align=center />
-<img src="./pictures/GNN_syn3_results_ori_fid_1fid_minus prob.png" width = "200" alt="" align=center />
-<img src="./pictures/GNN_syn3_results_ori_fid_1fid_Delta prob.png" width = "200" alt="" align=center />
-<br><br>
-<b>Figure 3. </b> Original Fidelity+,Fidelity-,Fidelity_$\Delta$.
+
+[//]: # (<img src="./pictures/GNN_syn3_results_ori_fid_1fid_plus prob.png"  width = "200" alt="" align=center />)
+
+[//]: # (<img src="./pictures/GNN_syn3_results_ori_fid_1fid_minus prob.png" width = "200" alt="" align=center />)
+
+[//]: # (<img src="./pictures/GNN_syn3_results_ori_fid_1fid_Delta prob.png" width = "200" alt="" align=center />)
+
+[//]: # (<br><br>)
+
+[//]: # (<b>Figure 3. </b> Original Fidelity+,Fidelity-,Fidelity_$\Delta$.)
+<table>
+  <tr>
+    <td><img src="./pictures/GNN_syn3_results_ori_fid_1fid_plus prob.png"  width = "100%" alt="" align=center /> </td>
+    <td><img src="./pictures/GNN_syn3_results_ori_fid_1fid_minus prob.png"  width = "100%" alt="" align=center /></td>
+    <td><img src="./pictures/GNN_syn3_results_ori_fid_1fid_Delta prob.png"  width = "100%" alt="" align=center /></td>
+  </tr>
+ </table>
 </center>
 
-#### Probability our Fidelity results of TreeCycles dataset($\Alpha_1 = 0.1$,$\Alpha_2 = 0.9$)(ACC results can be found in ./pictures)
+#### Probability our Fidelity results of TreeCycles dataset($\Alpha_1 = 0.1$,$\Alpha_2 = 0.9$)(ACC results can be found in ./pictures). The following three figures are Ours $Fidelity+$, $Fidelity-$, $Fidelity_\Delta$.
 <center class="ba2">
-<img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_plus prob.png" width = "200" alt="" align=center />
-<img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_minus prob.png" width = "200" alt="" align=center />
-<img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_Delta prob.png" width = "200" alt="" align=center />
-<br><br>
-<b>Figure 4. </b> Ours Fidelity+,Fidelity-,Fidelity_$\Delta$.
+
+[//]: # (<img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_plus prob.png" width = "200" alt="" align=center />)
+
+[//]: # (<img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_minus prob.png" width = "200" alt="" align=center />)
+[//]: # (<img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_Delta prob.png" width = "200" alt="" align=center />)
+<table>
+  <tr>
+    <td><img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_plus prob.png"  width = "100%" alt="" align=center /> </td>
+    <td><img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_minus prob.png"  width = "100%" alt="" align=center /></td>
+    <td><img src="./pictures/GNN_syn3_results_new_fid_0_0_seeds_1_fid_Delta prob.png"  width = "100%" alt="" align=center /></td>
+  </tr>
+ </table>
 </center>
 
 
