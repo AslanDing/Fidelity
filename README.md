@@ -16,8 +16,8 @@
 ![alt-text-1](pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png "title-1") ![alt-text-2](pictures/GNN_ba2_results_ori_fid_1fid_minus prob.png "title-2")![alt-text-2](pictures/GNN_ba2_results_ori_fid_1fid_Delta prob.png "title-2")
 
 <center class="ba2">
-<img src="./pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png"  width = "33%" alt="" align=center />
-<img src="./pictures/GNN_ba2_results_ori_fid_1fid_minus prob.png" width = "33%" alt="" align=center />
+<img src="./pictures/GNN_ba2_results_ori_fid_1fid_plus prob.png"  width = "33%" alt="" align=center /> &nbsp; &nbsp; &nbsp; &nbsp;
+<img src="./pictures/GNN_ba2_results_ori_fid_1fid_minus prob.png" width = "33%" alt="" align=center /> &nbsp; &nbsp; &nbsp; &nbsp;
 <img src="./pictures/GNN_ba2_results_ori_fid_1fid_Delta prob.png" width = "33%" alt="" align=center />
 <br><br>
 <b>Figure 1. </b> Original Fidelity+,Fidelity-,Fidelity_$\Delta$.
