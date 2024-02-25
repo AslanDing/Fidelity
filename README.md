@@ -12,7 +12,7 @@
 
 <!-- ## Continuous Version -->
 
-#### Probability ori. Fidelity results of Ba2Motifs dataset(ACC results can be found in ./pictures), the x-axis means adding non-explanation edges to GT, y-axis means remove edges from GT. The following three figures are Original Fidelity+,Fidelity-,Fidelity$_\Delta$.
+#### Probability ori. Fidelity results of Ba2Motifs dataset(ACC results can be found in ./pictures), the x-axis means adding non-explanation edges to GT, y-axis means remove edges from GT. The following three figures are Original Fidelity+,Fidelity-,Fidelity$_\Delta$ $\Delta$,$\delta$.
 
 [//]: # ($\Delta$)
 
