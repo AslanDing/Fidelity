@@ -51,7 +51,7 @@
 
 
 
-#### Probability our Fidelity results of Ba2Motifs dataset( $ {\alpha}_{1} $ = 0.1, $ \alpha_2 $ = 0.9 )(ACC results can be found in ./pictures). The following three figures are Ours $Fidelity+$, $Fidelity-$, $Fidelity_\Delta$.
+#### Probability our Fidelity results of Ba2Motifs dataset( $\alpha_1$ = 0.1, $ \alpha_2 $ = 0.9 )(ACC results can be found in ./pictures). The following three figures are Ours $Fidelity+$, $Fidelity-$, $Fidelity_\Delta$.
 <center class="ba2">
 
 [//]: # (<img src="./pictures/GNN_ba2_results_new_fid_0_0_seeds_1_fid_plus prob.png" width = "200" alt="" align=center />)
