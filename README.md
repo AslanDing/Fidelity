@@ -1,4 +1,4 @@
-# This Project is for our work [TOWARDS ROBUST FIDELITY FOR EVALUATING EXPLAINABILITY OF GRAPH NEURAL NETWORKS(ICLR2024)](https://openreview.net/pdf?id=up6hr4hIQH)
+# This Project is for our work, $Fidelity_\alpha$, [TOWARDS ROBUST FIDELITY FOR EVALUATING EXPLAINABILITY OF GRAPH NEURAL NETWORKS(ICLR2024)](https://openreview.net/pdf?id=up6hr4hIQH)
 
 
 ## use fidelity as metric
