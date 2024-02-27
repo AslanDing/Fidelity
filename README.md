@@ -113,12 +113,10 @@
 ### If this work is helpful for you, please consider citing our paper.
 
 ```angular2html
-@misc{zheng2023robust,
-      title={Towards Robust Fidelity for Evaluating Explainability of Graph Neural Networks}, 
-      author={Xu Zheng and Farhad Shirani and Tianchun Wang and Wei Cheng and Zhuomin Chen and Haifeng Chen and Hua Wei and Dongsheng Luo},
-      year={2023},
-      eprint={2310.01820},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{zheng2023towards,
+  title={Towards robust fidelity for evaluating explainability of graph neural networks},
+  author={Zheng, Xu and Shirani, Farhad and Wang, Tianchun and Cheng, Wei and Chen, Zhuomin and Chen, Haifeng and Wei, Hua and Luo, Dongsheng},
+  journal={arXiv preprint arXiv:2310.01820},
+  year={2023}
 }
 ```
