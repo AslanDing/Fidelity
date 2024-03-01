@@ -107,9 +107,9 @@ def robust_fidelity(
         # node task
         index = explanation.index
 
-        y = y[index]
-        y_hat = y_hat[index]
-        y_label = y_label[index]
+        y = y[index].view(-1)
+        y_hat = y_hat[index].view(-1)
+        y_label = y_label[index].view(-1)
 
         subset, edge_index, mapping, edge_mask_ = k_hop_subgraph(index, k_hop,
                                                                 graphs,
@@ -198,9 +198,9 @@ def robust_fidelity(
                         **kwargs,
                     )
                     mask_pred_plus_label = explainer.get_target(mask_pred_plus)
-                    mask_pred_plus = mask_pred_plus[index]
+                    mask_pred_plus = mask_pred_plus[index].view(-1)
 
-                    mask_label_plus = mask_pred_plus_label[index]
+                    mask_label_plus = mask_pred_plus_label[index].view(-1)
 
                     fid_plus = y_hat[label] - mask_pred_plus[label]
                     fid_plus_label = int(y_label == label) - int(mask_label_plus == label)
@@ -261,8 +261,8 @@ def robust_fidelity(
                         **kwargs, )
                     mask_pred_minus_label = explainer.get_target(mask_pred_minus)
 
-                    mask_pred_minus = mask_pred_minus[index]
-                    mask_label_minus = mask_pred_minus_label[index]
+                    mask_pred_minus = mask_pred_minus[index].view(-1)
+                    mask_label_minus = mask_pred_minus_label[index].view(-1)
 
                     fid_minus = y_hat[label] - mask_pred_minus[label]
                     fid_minus_label = int(y_label == label) - int(mask_label_minus == label)
