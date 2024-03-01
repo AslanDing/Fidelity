@@ -201,7 +201,7 @@ def edit_distance_gt_ratio_plus(type, model_to_explain, nodes, edges, explain_ed
         maps = {}
         explain_list = []
         non_explain_list = []
-        for i, (nodeid0, nodeid1, ex) in enumerate(zip(matrix_0, matrix_1, weights)):
+        for i, (nodeid0, nodeid1, ex) in enumerate(zip(matrix_0, matrix_1, weight)):
             max_node = max(nodeid0, nodeid1)
             min_node = min(nodeid0, nodeid1)
             if (min_node, max_node) in maps.keys():
@@ -394,7 +394,7 @@ def edit_distance_gt_ratio_minus(type, model_to_explain, nodes, edges, explain_e
         maps = {}
         explain_list = []
         non_explain_list = []
-        for i, (nodeid0, nodeid1, ex) in enumerate(zip(matrix_0, matrix_1, weights)):
+        for i, (nodeid0, nodeid1, ex) in enumerate(zip(matrix_0, matrix_1, weight)):
             max_node = max(nodeid0, nodeid1)
             min_node = min(nodeid0, nodeid1)
             if (min_node, max_node) in maps.keys():

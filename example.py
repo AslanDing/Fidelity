@@ -29,7 +29,7 @@ for index in indices:
     # find a subgraph
     explain_graph = torch.from_numpy(explanation_labels[0][index]).cuda()
     # explanation weight
-    weight = torch.ones_like(explain_graph[0])
+    weight = torch.ones_like(explain_graph[0])  # binary
 
 
     # original fidelity
@@ -67,7 +67,7 @@ for index in indices:
     # find a subgraph
     explain_graph = ptgeom.utils.k_hop_subgraph(index, 3, graphs)[1]
     # explanation weight
-    weight = torch.ones_like(explain_graph[0])
+    weight = torch.ones_like(explain_graph[0])  # binary
 
     # original fidelity
     fid_plus, fid_minus, fid_plus_label, fid_minus_label, sparsity = cal_ori_fid(task,model,features,
