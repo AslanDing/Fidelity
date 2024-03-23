@@ -16,7 +16,8 @@ def cal_ori_fid(type, model_to_explain, nodes, edges, explain_edges, weight, lab
        nodes: tensor, nodes [n,d]
        edges: tensor, [2,m]
        explain: subgraphs [2,m']
-       mask: weight [m'] which edge is explanations
+       mask: weight [m'] which edge is explanations;
+             attention, here should be a binary mask
        weight: explainable subgraph weights
        label: GT label for nodes task or graph task
        index: which nodes only valid in nodes tasks
@@ -134,6 +135,7 @@ def edit_distance_gt_ratio_plus(type, model_to_explain, nodes, edges, explain_ed
     edges: tensor, [2,m]
     explain: subgraphs [2,m']
     mask: weight [m'] which edge is explanations
+          attention, here should be a binary mask
     weight: explainable subgraph weights
     label: GT label for nodes task or graph task
     index: which nodes only valid in nodes tasks
@@ -322,6 +324,7 @@ def edit_distance_gt_ratio_minus(type, model_to_explain, nodes, edges, explain_e
         edges: tensor, [2,m]
         explain: subgraphs [2,m']
         mask: weight [m'] which edge is explanations
+              attention, here should be a binary mask
         weight: explainable subgraph weights
         label: GT label for nodes task or graph task
         index: which nodes only valid in nodes tasks
